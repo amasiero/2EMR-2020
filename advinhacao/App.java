@@ -1,3 +1,6 @@
+// Configuracao do PATH no prompt de comando
+// path %path%;C:\Program Files\Java\jdk1.8.0_212\bin
+
 import java.util.Scanner;
 
 public class App {
