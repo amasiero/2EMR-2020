@@ -6,9 +6,14 @@ class Jogo {
 	int nivel;
 	int tentativa;
 	int maximoTentativas;
+	final int LIMITE_MAXIMO = 100;
 	
 	void geraNumeroSecreto() {
-		numeroSecreto = new Random().nextInt(101);
+		numeroSecreto = new Random().nextInt(LIMITE_MAXIMO + 1);
+	}
+	
+	boolean validaIntervalo(int numeroInformado) {
+		return numeroInformado < 0 || numeroInformado > LIMITE_MAXIMO;
 	}
 	
 	int defineNivel(int nivel) {
@@ -40,8 +45,19 @@ class Jogo {
 	boolean ehMenor(int numeroInformado) {
 		return numeroSecreto < numeroInformado;
 	}
+	
+	boolean acabouTentativas() {
+		return tentativa > maximoTentativas;
+	}
+	
+	void somaTentativa() {
+		tentativa++;
+	}
 
 }
+
+
+
 
 
 
