@@ -34,6 +34,10 @@ public class Veiculo {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
+	
+	public String toString() {
+		return this.placa + " | " + this.marca + " " + this.modelo;
+	}
 }
 
 
