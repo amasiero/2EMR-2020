@@ -11,8 +11,26 @@ import java.util.List;
 
 import br.com.fiap.escola.domain.Aluno;
 
+/**
+ * 
+ * Esse á uma classe que implementa os métodos de acesso ao banco de dados,
+ * referente a classe de domínio Aluno.
+ * 
+ * Por favor, veja a classe {@link br.com.fiap.escola.domain.Aluno} para identificar
+ * seus atributos.
+ * 
+ * @author Luke Skywalker
+ * @version 1.0
+ * 
+ */
 public class AlunoDAO {
 
+	/**
+	 * Conexão privada com o banco de dados.
+	 * 
+	 * @see java.sql.Connection
+	 * 
+	 */
 	private Connection conn;
 
 	private void conecta() throws ClassNotFoundException, SQLException {
@@ -57,6 +75,19 @@ public class AlunoDAO {
 		return alunos.isEmpty() ? null : alunos;
 	}
 
+	/**
+	 * <p>Consulta a existência do 
+	 * <a href="https://xkcd.com/2203/">aluno</a> no banco de dados a partir
+	 * de seu rm</p>
+	 * 
+	 * @param rm atributo long que refere-se ao número de identificação do aluno
+	 * @return o aluno encontrado no banco ou nulo em caso negativo
+	 * @throws ClassNotFoundException
+	 * @throws SQLException
+	 * 
+	 * @see <a href="https://xkcd.com/1884/">TASK #1</a>
+	 * @since 1.0
+	 */
 	public Aluno consultaPorRM(Long rm) throws ClassNotFoundException, SQLException {
 		this.conecta();
 

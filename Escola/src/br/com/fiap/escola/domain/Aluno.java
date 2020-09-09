@@ -1,5 +1,10 @@
 package br.com.fiap.escola.domain;
 
+/**
+ * 
+ * Comentário Javadoc
+ *
+ */
 public class Aluno {
 
 	private Long id;
