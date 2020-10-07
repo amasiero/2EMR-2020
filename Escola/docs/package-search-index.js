@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"br.com.fiap.escola"},{"l":"br.com.fiap.escola.dao"},{"l":"br.com.fiap.escola.domain"},{"l":"br.com.fiap.escola.exception"},{"l":"br.com.fiap.escola.helper"}];updateSearchResults();
